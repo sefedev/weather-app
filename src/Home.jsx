@@ -1,4 +1,3 @@
-import { Button, CircularProgress, TextField } from "@mui/material";
 import React, { useState } from "react";
 import useFetch from "./components/UseFetch";
 
@@ -23,23 +22,25 @@ function Home() {
   return (
     <>
       <form>
-        <TextField
+        <input
           type="text"
           placeholder="Enter a city"
           name="city"
           onChange={getCity}
         />
-        <Button onClick={handleGetWeather}>Search</Button>
+        <button onClick={handleGetWeather}>Search</button>
+      </form>
 
-        {weather == "" ? (
+        {/* {weather == "" ? (
           <p></p>
         ) : (
           <p>
             Today: The Temperature is {weather.temperature} running wind at
             speed {weather.wind} condition is {weather.description}
           </p>
-        )}
-      </form>
+        )} */}
+
+        <h1 className="text-red-600 ">Hello</h1>
     </>
   );
 }
